@@ -93,20 +93,8 @@ ul {
   gap: 40px;
 }
 
-.navigation-item {
+.navigation-item .nav-link {
   padding: 24px 0;
-}
-
-.address .list {
-  display: flex;
-  padding-right: 156px;
-  gap: 40px;
-  align-items: flex-start;
-}
-
-.address-list-item {
-  padding-top: 24px;
-  padding-bottom: 24px;
 }
 
 .logo {
@@ -125,6 +113,7 @@ ul {
 
 .logo-studio {
   color: var(--navyblue);
+  padding: 24px 0;
 }
 
 .nav-link {
@@ -156,6 +145,17 @@ ul {
 
 .address {
   font-style: normal;
+}
+
+.address .list {
+  display: flex;
+  padding-right: 156px;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.address-list-item {
+  padding: 24px 0;
 }
 
 /* ------------------------------Main------------------------- */
@@ -395,7 +395,6 @@ ul {
 }
 
 .footer .container {
-  display: flex;
   padding-left: 156px;
   padding-top: 100px;
   padding-bottom: 100px;
@@ -406,7 +405,6 @@ ul {
 .footer-text {
   color: var(--cloud);
   letter-spacing: 0.02em;
-  display: flex;
   max-width: 264px;
 }
 
