@@ -34,6 +34,10 @@ p {
   padding: 0;
 }
 
+img {
+  display: block;
+}
+
 ul {
   margin: 0;
   padding-left: 0;
@@ -62,13 +66,16 @@ ul {
 
 .container {
   max-width: 1440px;
-  padding-left: 0;
-  padding-right: 0;
-  margin-left: 0;
-  margin-right: 0;
+  width: 1158px;
+  padding: 0 15px;
+  margin: 0 auto;
 }
 
 /* ----------------- Header------------------- */
+.header {
+  border-bottom: 1px solid var(--cornflower);
+}
+
 .header .container {
   display: flex;
   justify-content: space-between;
@@ -77,6 +84,7 @@ ul {
 .header-navigation {
   display: flex;
   gap: 76px;
+  align-items: center;
 }
 
 .header-navigation .list {
@@ -88,7 +96,7 @@ ul {
 }
 
 .address .list {
-  display: inline-flex;
+  display: flex;
   padding-right: 156px;
   gap: 40px;
   align-items: flex-start;
@@ -110,7 +118,7 @@ ul {
   color: var(--iris);
   padding-top: 24px;
   padding-bottom: 24px;
-  padding-left: 156px;
+  margin-right: 76px;
 }
 
 .logo-studio {
@@ -152,10 +160,18 @@ ul {
 
 .hero-block {
   background-color: var(--navyblue);
+  padding: 188px 0;
   display: flex;
-  height: 600px;
-  width: 1440px;
   flex-shrink: 0;
+}
+
+.main-heading {
+  color: var(--white);
+  max-width: 496px;
+  font-size: 56px;
+  line-height: 1.07;
+  letter-spacing: 0.02em;
+  margin-bottom: 48px;
 }
 
 .order-button {
@@ -168,10 +184,11 @@ ul {
   font-weight: 500;
   cursor: pointer;
   padding: 16px 32px;
-  display: inline-flex;
-  align-items: flex-start;
-  gap: 10px;
-  margin-left: 636px;
+  display: block;
+  min-width: 169px;
+  height: 56px;
+  border: none;
+  border-radius: 4px;
 }
 
 .order-button:hover,
@@ -180,19 +197,10 @@ ul {
   background-color: var(--ocean);
 }
 
-.main-heading {
-  color: var(--white);
-  font-size: 56px;
-  line-height: 1.07;
-  text-align: center;
-  letter-spacing: 0.02em;
-  margin: 188px 472px 48px;
-}
-
 .about-company {
   display: flex;
   flex-shrink: 0;
-  margin: 120px 156px;
+  padding: 120px 0;
 }
 
 .about-company .list {
@@ -201,13 +209,18 @@ ul {
   gap: 24px;
 }
 
+.about-company .list .company-list-item {
+  width: calc((100% - 72px) / 4);
+}
+
 .about-company .list h3 {
   display: flex;
+  margin-bottom: 8px;
 }
 
 .img-section {
   display: flex;
-  margin: 120px 156px;
+  padding-bottom: 120px;
   flex-shrink: 0;
 }
 
@@ -223,6 +236,10 @@ ul {
   gap: 24px;
 }
 
+.img-section-item {
+  width: calc((100% - 48px) / 3);
+}
+
 .secondary-heading {
   color: var(--navyblue);
   font-size: 36px;
@@ -232,21 +249,22 @@ ul {
   text-transform: capitalize;
 }
 
-.third-heading {
+.team-list .third-heading {
   color: var(--navyblue);
   font-size: 20px;
   line-height: 1.2;
   font-weight: 500;
   text-align: center;
   letter-spacing: 0.02em;
+  margin-bottom: 8px;
 }
 
 .team-section {
   background-color: var(--cloud);
+  padding: 120px 0;
 }
 
 .team-section .container {
-  height: 732px;
   flex-shrink: 0;
 }
 
@@ -255,6 +273,7 @@ ul {
   justify-content: center;
   padding-top: 120px;
   padding-bottom: 72px;
+  margin-bottom: 72px;
 }
 
 .team-section .container .list {
@@ -270,17 +289,19 @@ ul {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--slate);
+  text-align: center;
 }
 
-.list-item {
+.team-list-item {
   background-color: #ffffff;
+  width: calc((100% - 72px) / 4);
+  border-radius: 0px 0px 4px 4px;
 }
 
 .team-info {
   display: flex;
-  margin: 32px 16px;
+  padding: 32px 16px;
   flex-direction: column;
-  gap: 8px;
 }
 
 .team-info .list-paragraph {
@@ -289,10 +310,14 @@ ul {
 }
 
 /* ---------------PORTFOLIO--------------------- */
+.portfolio-main {
+  padding-top: 96px;
+  padding-bottom: 120px;
+}
+
 .list-button {
   display: flex;
   flex-direction: row;
-  margin-top: 168px;
   margin-bottom: 72px;
   justify-content: center;
   gap: 24px;
@@ -304,6 +329,7 @@ ul {
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: var(--navyblue);
+  margin-bottom: 8px;
 }
 
 .portfolio-text {
@@ -323,6 +349,8 @@ ul {
   background-color: var(--cloud);
   padding: 12px 24px;
   cursor: pointer;
+  border: 1px solid var(--cornflower);
+  border-radius: 4px;
 }
 
 .button-filters:hover,
@@ -330,6 +358,7 @@ ul {
 .button-filters:active {
   color: #ffffff;
   background-color: var(--ocean);
+  border: 1px solid transparent;
 }
 
 .card-list {
@@ -338,21 +367,25 @@ ul {
   gap: 24px;
   flex-wrap: wrap;
   justify-content: center;
-  margin-bottom: 120px;
+  row-gap: 48px;
+}
+
+.card-item {
+  width: calc((100% - 48px) / 3);
 }
 
 .card-info {
   display: flex;
-  margin: 32px 16px;
+  padding: 32px 16px;
   flex-direction: column;
-  gap: 8px;
+  border: 1px solid var(--cornflower);
 }
 
 /* ------------------Footer----------------------- */
 
 .footer {
   background-color: var(--navyblue);
-  height: 312px;
+  padding: 100px 0;
 }
 
 .footer .container {
@@ -362,18 +395,17 @@ ul {
   padding-bottom: 100px;
   flex-shrink: 0;
   flex-direction: column;
-  gap: 18px;
 }
 
 .footer-text {
   color: var(--cloud);
   letter-spacing: 0.02em;
   display: flex;
-  margin-right: 1020px;
+  max-width: 264px;
 }
 
 .logo-footer {
-  display: inline-flex;
+  display: inline-block;
   font-family: "Raleway", sans-serif;
   font-size: 18px;
   text-decoration: none;
@@ -382,7 +414,7 @@ ul {
   font-weight: 800;
   text-transform: uppercase;
   color: var(--iris);
-  margin-right: 1169px;
+  margin-bottom: 16px;
 }
 
 .logo-studio-footer {
