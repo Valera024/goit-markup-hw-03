@@ -83,7 +83,6 @@ ul {
 
 .header-navigation {
   display: flex;
-  gap: 76px;
   align-items: center;
 }
 
@@ -108,7 +107,7 @@ ul {
   color: var(--iris);
   padding-top: 24px;
   padding-bottom: 24px;
-  margin: 0 auto;
+  margin-right: 76px;
 }
 
 .logo-studio {
@@ -264,6 +263,7 @@ ul {
 
 .team-section {
   background-color: var(--cloud);
+  padding: 120px 0;
 }
 
 .team-section .container {
@@ -273,8 +273,6 @@ ul {
 .team-section .container .secondary-heading {
   display: flex;
   justify-content: center;
-  padding-top: 120px;
-  padding-bottom: 72px;
   margin-bottom: 72px;
 }
 
@@ -283,7 +281,6 @@ ul {
   flex-direction: row;
   justify-content: center;
   gap: 24px;
-  padding-bottom: 120px;
 }
 
 .list-paragraph {
