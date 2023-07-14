@@ -91,8 +91,10 @@ ul {
   display: flex;
   flex-direction: row;
   gap: 40px;
-  padding-top: 24px;
-  padding-bottom: 24px;
+}
+
+.navigation-item {
+  padding: 24px 0;
 }
 
 .address .list {
@@ -315,6 +317,10 @@ ul {
   padding-bottom: 120px;
 }
 
+.portfolio-main .container {
+  border-top: none;
+}
+
 .list-button {
   display: flex;
   flex-direction: row;
@@ -419,4 +425,5 @@ ul {
 
 .logo-studio-footer {
   color: var(--cloud);
+  display: inline-block;
 }
